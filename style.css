@@ -1,0 +1,71 @@
+
+* {box-sizing: border-box}
+  
+  body {margin: 0;}
+  
+  #chat {
+      height: 100vh;
+      background: rgb(148, 160, 228);
+      display: grid;
+       /*Разделяем секцию Chat на 3 горизонтальных контейнера*/
+  }
+  
+  #header {
+    background:#e3e8ff;
+    min-height: 50px;
+  }
+  
+  #footer {
+    min-height: 100px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  
+  .flexInput { /*Позиционируем input внутри блока*/
+    display: flex; 
+    flex-direction: column;
+  }
+  
+  #footerText {
+    flex: 1; 
+  }
+  
+  .wrapLeftRigt {
+      display: grid;
+      grid-template-columns: 200px auto;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      overflow: hidden;
+  }
+  
+  
+  #left, #right {
+      overflow-y: scroll;
+      height: 100%;
+  }
+  
+  #left > ul { /*Корректировка списка*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  #left > ul > li, #right > p{
+      width: max-content;
+      padding: 3px 4px;
+      margin: 5px 2px;
+      border-radius: 5px;
+  }
+  
+  #left > ul > li{
+    background: #dbdfe1;
+  }
+  
+  #right > p {
+    background: #88c6e6;
+  }
